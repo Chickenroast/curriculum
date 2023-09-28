@@ -1,15 +1,10 @@
+
+
 .article {
     margin-left: 20px;
-    grid-area: a;
+    grid-area: d;
 }
 
-.skills {
-    padding-left: 10px;
-    padding-top: 0%;
-    grid-area: b;
-    font-family: 'Courier New', Courier, monospace;
-    color: beige;
-}
 
 body {
     background-color: rgb(37, 37, 37);
@@ -18,7 +13,10 @@ body {
 }
 
 .contact {
-    margin-left: 20px;
+    grid-area: b;
+    text-align: center;
+    background-color: brown;
+
 }
 
 h3 {
@@ -31,20 +29,25 @@ h3 {
     grid-template-rows: auto;
     grid-template-areas:
       "a"
+      "d"
+      "c"
       "b";
   }
   .skills {
     padding-top: 10px;
-    grid-area: b;
+    grid-area: c;
+    padding-left: 10px;
 }
 
 .colonne-gauche .colonne-droite {
     text-align: center;
     padding: 20px;
+    background-color: rgb(66, 0, 0);
 
 }
 
 .img {
+    grid-area: a;
     clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
     width: 100%;
 }  
