@@ -1,0 +1,142 @@
+.article {
+    margin-left: 20px;
+    grid-area: a;
+}
+
+.skills {
+    padding-left: 10px;
+    padding-top: 0%;
+    grid-area: b;
+    font-family: 'Courier New', Courier, monospace;
+    color: beige;
+}
+
+body {
+    background-color: rgb(37, 37, 37);
+    color: beige;
+    margin: 0;
+}
+
+.contact {
+    margin-left: 20px;
+}
+
+h3 {
+    margin-bottom: -10px;
+}
+
+.global {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "a"
+      "b";
+  }
+  .skills {
+    padding-top: 10px;
+    grid-area: b;
+}
+
+.colonne-gauche .colonne-droite {
+    text-align: center;
+    padding: 20px;
+
+}
+
+.img {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    width: 100%;
+}  
+
+.container {
+    align-content: center;
+}
+
+@media only screen and (min-width: 780px) {
+.global {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "d c b"
+      "a a b" 
+      "a a b";
+  }
+  
+  
+  .colonne-droite {
+    box-shadow: 10px 5px 5px red;
+      background-color: rgb(66, 0, 0);
+      grid-area: a;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      z-index: -2;
+  }
+  
+  .colonne-gauche {
+      box-shadow: 10px 5px 5px red;
+      background-color: rgb(102, 2, 2);
+      grid-area: b;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .container {
+      display: flex;
+      margin-left: 10%;
+      margin-bottom: -10%;
+      flex-basis: fit-content;
+  }
+
+  .contact {
+    padding-left: 10px;
+    grid-area: d;
+    display: flex;
+    margin: 10%;
+    box-shadow: 10px 5px 5px red;
+    background-color: rgb(102, 2, 2);
+    flex-direction: column;
+    font-size: 1.5vmax;
+    word-break: nowrap;
+}
+
+  .img {
+      grid-area: c;
+      clip-path: none;
+      width: fixed;
+      object-fit: contain;
+      left: 0px;
+      z-index: -1;
+      margin-top: 20%;
+  }
+  
+  .article {
+      margin-left: 20px;
+      grid-area: a;
+      font-family: 'Courier New', Courier, monospace;
+      color: beige;
+  }
+  
+  .skills {
+      padding-left: 10px;
+      padding-top: 10%;
+      grid-area: b;
+      font-family: 'Courier New', Courier, monospace;
+      color: beige;
+  }
+  ul, li{
+    font-size: 1.5vmax;
+  }
+  
+  body {
+    background: rgb(0,0,0);
+background: linear-gradient(153deg, rgba(0,0,0,1) 0%, rgba(70,70,70,1) 49%, rgba(0,0,0,1) 100%);
+  }
+  
+  h3 {
+      margin-bottom: -10px;
+  }
+}
