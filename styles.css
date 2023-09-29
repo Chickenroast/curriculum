@@ -4,12 +4,13 @@
 
 body {
     background-color: rgb(48, 48, 48);
-    size: 100vh;
+    height: 100vh;
+    width: 100%;
 }
 .global {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100vh;
+  grid-template-rows: auto;
   grid-template-areas:
     "a a b"
     "a a b";
@@ -35,9 +36,14 @@ body {
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
+    display: inline-block;
+    flex-basis: fit-content;
 
+}
+
+.contact {
+    display: inline-block;
+    text-align: left;
 }
 
 .img {
@@ -62,9 +68,6 @@ body {
     color: beige;
 }
 
-body {
-    background-color: rgb(37, 37, 37);
-}
 
 h3 {
     margin-bottom: -10px;
@@ -99,19 +102,13 @@ h3 {
 
     .container {
         align-content: center;
+        justify-content: left;
     }
   
 
 }
 
-@media only screen and (min-width: 780px) {
-    .img {
-        top: 30px;
-        width: 30%;
-        position: absolute;
-    }
-  
-}
+
 
 /* FLEXBOX */
 
